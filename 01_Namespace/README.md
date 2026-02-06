@@ -186,7 +186,11 @@ Namespaces support:
 
 ## 12. One-Line Exam Definition
 
-A Namespace in Kubernetes is a logical isolation mechanism used to organize, manage, and control access to resources within a single cluster.
+A Namespace is a logical separation mechanism in Kubernetes used to organize and manage resources within a cluster.
+It allows multiple teams or applications to share the same cluster without interfering with each other.
+Namespaces help avoid resource name conflicts, apply access control policies, and set resource limits like CPU and memory.
+They are mainly used in large or multi-tenant environments such as development, testing, and production setups.
+Namespaces do not provide complete isolation but help in efficient resource management and security.
 
 ---
 

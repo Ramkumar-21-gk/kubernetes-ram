@@ -245,7 +245,11 @@ Pods are usually managed using:
 
 ## 16. One-Line Exam Definition
 
-A Pod is the smallest execution unit in Kubernetes that encapsulates one or more containers with shared networking and storage.
+A Pod is the smallest and basic deployable unit in Kubernetes.
+A pod represents one running instance of an application and can contain one or more containers that work together.
+All containers inside a pod share the same network IP, port space, and storage volumes, which allows them to communicate easily.
+Pods are created, managed, and replaced by Kubernetes controllers like Deployments and ReplicaSets, rather than being managed directly.
+If a pod fails, Kubernetes automatically creates a new pod to maintain the desired state of the application.
 
 ---
 
