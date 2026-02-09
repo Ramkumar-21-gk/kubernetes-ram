@@ -1,0 +1,21 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: notes-app-dep
+  namespace: nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: notes-app
+  template:
+    metadata:
+      name: notes-app-pod
+      labels:
+        app: notes-app
+    spec:
+      containers:
+      - name: notes-app
+        image: ramkinetic14/notes-app
+        ports:
+        - containerPort: 80
